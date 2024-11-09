@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { SignUpButton } from "@clerk/nextjs";
-import {   ArrowRightIcon, Link } from "lucide-react";
+import {   ArrowRightIcon } from "lucide-react";
+import Link from "next/link";
 import { NeonIcon } from "./_icons/Neon";
 import { ClerkIcon } from "./_icons/Clerk";
 
@@ -19,38 +20,44 @@ export default function HomePage() {
           </SignUpButton>
       </section>
       <section className="bg-primary text-primary-foreground">
-        <div className="container py-12 flex flex-col gap-16 px-8 md:px-16">
-          <h2 className="text-3xl text-center text-balance font-semibold">
-            Trusted by the top modern companies 
+        <div className="container py-16 flex flex-col gap-16 px-8 md:px-16">
+          <h2 className="text-3xl text-center text-balance">
+            Trusted by the top modern companies
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-col-5 gap-16">  
+          <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-16">
             <Link href="https://neon.tech">
               <NeonIcon />
-            </Link>  
+            </Link>
             <Link href="https://clerk.com">
               <ClerkIcon />
-            </Link>  
+            </Link>
             <Link href="https://neon.tech">
               <NeonIcon />
-            </Link>  
+            </Link>
+            <Link href="https://clerk.com">
+              <ClerkIcon />
+            </Link>
             <Link href="https://neon.tech">
               <NeonIcon />
-            </Link>  
+            </Link>
+            <Link href="https://clerk.com">
+              <ClerkIcon />
+            </Link>
             <Link href="https://neon.tech">
               <NeonIcon />
-            </Link>  
+            </Link>
+            <Link href="https://clerk.com">
+              <ClerkIcon />
+            </Link>
             <Link href="https://neon.tech">
               <NeonIcon />
-            </Link>  
-            <Link href="https://neon.tech">
-              <NeonIcon />
-            </Link>  
-            <Link href="https://neon.tech">
-              <NeonIcon />
-            </Link>  
+            </Link>
+            <Link className="md:max-xl:hidden" href="https://clerk.com">
+              <ClerkIcon />
+            </Link>
           </div>
         </div>
-     </section>  
+      </section>  
       
       
     </>
