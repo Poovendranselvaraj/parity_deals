@@ -4,6 +4,8 @@ import {   ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
 import { NeonIcon } from "./_icons/Neon";
 import { ClerkIcon } from "./_icons/Clerk";
+import { subscriptionTiersInOrder } from "@/data/subscriptionTiers";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function HomePage() {
   return(
@@ -67,9 +69,23 @@ export default function HomePage() {
             <PricingCard key={tier.name} {...tier} />
           ))}
         </div>
-      </section>
-      
-      
+      </section> 
     </>
   )
 } 
+function PricingCard({
+  name,
+  priceInCents,
+  maxNumberOfProducts,
+  maxNumberOfVisits,
+  canAccessAnalytics,
+  canCustomizeBanner,
+  canRemoveBranding,
+}: typeof subscriptionTiersInOrder[number]) {
+  return <Card>
+    <CardHeader>
+      <CardTitle>${priceInCents * 100} /mo</CardTitle>
+      <CardDescription></CardDescription>
+    </CardHeader>
+  </Card>
+}
